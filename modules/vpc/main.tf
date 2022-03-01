@@ -16,7 +16,7 @@ module "vpc" {
 
   azs             = ["us-east-1a", "us-east-1b", /*"us-east-1c", "us-east-1d"*/] # 2 AZs will deploy 2 NAT Gateways for this HA architecture.
   public_subnets  = ["10.16.0.0/24", "10.16.16.0/20", /*"10.16.32.0/20", "10.16.48.0/20"*/]
-  private_subnets = ["10.16.64.0/24", "10.16.80.0/20", "10.16.96.0/20", "10.16.112.0/20"]
+  private_subnets = ["10.16.64.0/20", "10.16.80.0/20", "10.16.96.0/20", "10.16.112.0/20"]
 
   enable_nat_gateway     = false
   one_nat_gateway_per_az = false #This is key to our HA architecture. Set to true
