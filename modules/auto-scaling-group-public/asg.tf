@@ -1,7 +1,3 @@
-module "vpc" {
-  source = "../../modules/vpc/"
-}
-
 module "autoscaling" {
   source  = "terraform-aws-modules/autoscaling/aws"
   version = "5.1.1"
